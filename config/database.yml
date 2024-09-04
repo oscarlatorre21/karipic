@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: vagrant
+  password: ror2024
+  port: 5432
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: kari_pic_development
+
+test:
+  <<: *default
+  database: kari_pic_test
+
+production:
+  <<: *default
+  database: kari_pic_production
+  username: kari_pic
+  password: <%= ENV['KARIPIC_DATABASE_PASSWORD'] %>
