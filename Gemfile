@@ -60,7 +60,7 @@ group :test do
 end
 gem 'devise'
 gem 'image_processing'
-gem 'aws-sdk-s3', '~> 1.48'
+gem 'aws-sdk-s3', '~> 1.168'
 
 gem "figaro", "~> 1.2"
 
